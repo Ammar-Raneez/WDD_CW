@@ -1,0 +1,152 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.bold {
+	font-size: 25px;
+}
+
+body {
+	background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-image: url("../Images/title2.png");
+}
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 8fr 3fr;
+	grid-gap: 1em;
+	grid-auto-rows: minmax(100px,auto);
+	padding: 0 3.5em 0 3.5em;
+}
+
+img {
+	border-radius: 25px;
+	width: 275px;
+	height: 280px;
+	margin-left: 4%;
+	margin-top: 4%;
+	border-style: double;
+	border-width: 5px;
+	border-color: #7DF9FF;  
+}
+.heading {
+	color:red;
+	font-family: "Bebas Neue", Arial; 
+	font-size: 60px;
+	padding-left: 8%;
+	padding-top:2%;
+}
+.wrapper > div {
+	padding: 0.5em;
+}
+
+.nested {
+	display: grid;
+	font-size: 20px;
+	font-family: 'Acme', sans-serif;
+	color: white;
+}
+.nested > div {
+	border-top-style: solid;
+	border-top-width: 7px;
+	border-top-color: rgb(19, 48, 49);
+}
+
+.mail a {
+	text-decoration: none;
+	color: red;
+}
+
+.insta {
+	font-size: 25px;
+	color:#fb3958;
+}
+
+.facebook {
+	font-size: 25px;
+	color: lightskyblue;
+}
+
+.hover:hover {
+	cursor: pointer;
+}
+
+.introduction {
+	align-self: start;
+	
+}
+
+.sub {
+	font-size: 300%;
+	text-transform: uppercase;
+	font-family: 'Teko', sans-serif;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #8e9df5;
+}
+
+.sections {
+	padding: 0.5em 4em 1em 4em;
+	border-bottom:2px solid #bdd6d1;
+}
+
+.paragraph {
+	color:#ed5927;
+	font-size: 130%;
+	font-family: 'Oswald', sans-serif;
+	line-height: 1.8;
+}
+
+li {
+	list-style: square;
+}
+
+.box1 {
+	border-left-style: solid;
+	border-left-width: 8px;
+	border-left-color: #7DF9FF;
+	border-top-style: solid;
+	border-top-width: 8px;
+	border-top-color: #7DF9FF;
+	border-radius: 15px;
+	box-shadow: 5px 5px 20px 5px rgba(125, 249, 255);
+}
+
+.top {
+	border-top-style: solid;
+	border-top-width: 8px;
+	border-top-color: #7DF9FF;
+	border-radius: 15px;
+	box-shadow: 5px 5px 20px 5px rgba(125, 249, 255);
+}
+
+.subsub {
+	letter-spacing: 2px;
+	word-spacing: 2px;
+	color: slategrey;
+	font-weight: 400;
+	font-variant: small-caps;
+	text-transform: capitalize;
+	text-decoration: underline;
+}
+
+#back-to-top a {
+	text-decoration: none;
+	text-align: justify;
+	color: turquoise;
+}
+
+.back-to-home {
+	float: right;
+}
+
+.back-to-home:hover, #back-to-top a:hover {
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+#nav-resize {
+	margin-left: 48%;
+}

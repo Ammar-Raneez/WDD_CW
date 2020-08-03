@@ -1,0 +1,573 @@
+/*navbar used throughout*/
+html {
+    scroll-behavior: smooth;
+}
+
+.main-body {
+    background-image: url("../Images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.logo {
+    width: 110px;
+    height: 85;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo .img-logo {
+    width: 110px;
+    height: 85px;
+    float: left;
+}
+
+.nav-links {
+    clear: both;
+    overflow: auto;
+}
+
+nav {
+    margin-top: 15px;
+    float: right;
+}
+
+nav li {
+    padding: 10px;
+    display: inline;
+    font-size: 1.5rem;
+    font-family: 'Oxanium';
+    opacity: 0.7;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover, nav li .active {
+    color: rgb(102, 255, 255);
+    transition: 1s ease;
+    font-size: 2.1rem;
+    cursor: pointer;
+}
+
+nav li .active {
+    font-size: 2.1rem;
+}
+
+nav li a:not(:hover) {
+    transition: 1s ease;
+}
+/*end of navbar*/
+
+/*page editor footer*/
+.page-editor {
+    margin-top: -3%;
+    color:white; 
+    text-align: center;
+    font-family: 'Oxanium';
+}
+
+.about-us {
+    padding-left: 1%;
+    margin-top: -5%;
+    color: white;
+    font-family: 'Oxanium';
+    border: 1px solid rgb(102, 255, 255);
+    width: 7%;
+}
+
+.about-us:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(102, 255, 255);
+    transition: 0.6s ease;
+}
+
+
+/******************Main Page********************/
+.quote blockquote {
+    color: white;
+    text-align: center;
+    font-family: "Pacifico";
+    font-style: oblique;
+    font-size: 1.7rem;
+    opacity: 0.7;
+}
+
+.social {
+    width: 90px;
+    display: flex;
+    margin-left: 93%;   
+    margin-top: 34%;
+}
+
+.social img:hover {
+    opacity: 0.5;
+}
+
+.social img {
+    padding: 2px 0px 2px 0px;
+    width: 30px;
+    height: 30px;
+}
+/************end of Main Page*****************/
+
+
+
+/*************presentation Page***************/
+.presentation-logo {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	height: 50%;
+	margin-top: -5%;
+}
+
+.grid-container {
+	display:grid;
+	grid-template-columns:50% 50%;
+	height: 100%;
+}
+
+.picture-grid-rows {
+	background-image: url("../Images/Presentation_Page.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.presentation-h1, .presentation-padding {
+	font-family: 'Oxanium';
+	text-align:center;
+	color:white;
+	opacity:0.8;
+}
+
+.text-grid {
+	background-image: url("../Images/image1.jpg");
+	padding: 25px;
+	background-size: contain;
+}
+
+.presentation-padding {
+	padding: 0em 7.5em 7.5em 7.5em;
+}
+/*************end of presentation page*************/
+
+
+
+/*************feedback page****************/
+.feedback-body {
+    background-image: url("../Images/feedback.jpg");
+    background-size: cover;
+}
+
+.form-container {
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    border-radius: 10px;
+    margin: auto;
+    width: 50%;
+    height: 93%;
+    padding: 10px 55px 10px 55px;
+    font-family: 'Oxanium';
+    color: white;
+}
+
+.form-heading {
+    font-size: 1.6em;
+    letter-spacing: 3px;
+}
+
+#logo-form {
+    float: right;
+    margin-top: -10%;
+}
+
+.form-container input[type=text], .form-container input[type=email], .form-container textarea {
+    width: 98%;
+    outline: none;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 8px;
+    color: white;
+    border-bottom: 1px solid grey;
+}
+
+.rating {
+    text-align: center;
+    width: 100%;
+}
+
+#reset {
+    color: red;
+    background-color: white;
+    transition: 0.6s ease;
+}
+
+#reset:hover {
+    color: white;
+    background-color: red;
+}
+
+#submit {
+    float: right;
+    color: rgb(102, 255, 255);
+    background-color: black;
+    transition: 0.6s ease;
+}
+
+#submit:hover {
+    color: black;
+    background-color: rgb(102, 255, 255);
+}
+
+.footer-buttons {
+    border-radius: 10px;
+    padding: 10px;
+    width: 120px;
+    border: none;
+}
+
+.footer-buttons:hover {
+    width: 150px;
+    cursor: pointer;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.popup-content {
+    margin: auto;
+    padding: 20px;
+    width: 80%;
+    border: 1px solid rgb(102, 255, 255);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    letter-spacing: 3px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover, .close:focus {
+    color: rgb(102, 255, 255);
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+
+#error-message {
+    margin-bottom: 10px;
+    padding: 0px;
+    background-color: red;
+    font-family: 'Oxanium';
+    border: 0px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    transition: all 0.5s ease;
+}
+
+.page-editor-form {
+    margin-top: -3.5%;
+    margin-left: 23%;
+}
+
+.page-editor-form a {
+    text-decoration: none;
+    color: white;
+    padding: 0;
+}
+
+
+.form-header {
+    clear: both;
+    overflow: auto;
+}
+/*************end of Feedback page*************/
+
+
+
+/****************Pop Quiz Page****************/
+.quiz-body {
+    font-size: 20px;
+    font-family: monospace;
+}
+
+#quiz-container {
+    margin :115px auto;
+    /* background-color: black; */
+    height: 300px;
+    width : 700px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 15px 0px;
+    position: relative;
+    background-image:url("Images/Questionnaire3.jpg");
+    background-repeat: no-repeat;
+}
+
+#quiz-start {
+    font-size: 1.5em;
+    font-weight: bolder;
+    word-break: break-all;
+    width:200px;
+    height:80px;
+    border : 10px solid white;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    left:245px;
+    top:110px;
+    color : black;
+    background-color: rgba(256, 256, 256, 0.7);
+}
+
+#quiz-start:hover {
+    border: 10px solid rgb(102, 255, 255);
+    /* color : lightseagreen; */
+}
+
+#quiz-question {
+    width:500px;
+    height : 125px;
+    position: absolute;
+    right:0;
+    top:0;
+}
+
+#quiz-question p {
+    margin : 0;
+    padding : 15px;
+    font-size: 1.25em;
+    color:white;
+}
+
+#quiz-choices {
+    width : 480px;
+    position: absolute;
+    right : 0;
+    top : 125px;
+    padding : 10px
+}
+
+.quiz-choice {
+    display: inline-block;
+    color:black;
+    width : 135px;
+    text-align: center;
+    border : 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    padding : 5px;
+    background: rgba(256, 256, 256, 0.7);
+}
+
+.quiz-choice:hover {
+    border : 2px solid white;
+    border-radius: 15px;
+    background-color:white;
+    font-weight: bold;
+    transition: 80ms ease;
+}
+
+#quiz-timer {
+    position: absolute;
+    height : 100px;
+    width : 200px;
+    bottom : 0px;
+    text-align: center;
+    color:lightgray;
+}
+
+#quiz-counter {
+    font-size: 3em;
+}
+
+#quiz-btimeGauge {
+    width : 150px;
+    height : 10px;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin-left : 25px;
+}
+
+#quiz-timeGauge {
+    height : 10px;
+    border-radius: 10px;
+    background-color: mediumseagreen;
+    margin-top : -10px;
+    margin-left : 25px;
+}
+
+#quiz-resultsContainer {
+    background-image:url("Images/results.jpg");
+    font-size:20px;
+    color:white;
+    margin: auto;
+    padding-top: 1px;
+    padding-left: 30px;
+    font-weight: 60px;
+}
+/*************end of feedback form*************/
+
+
+
+/***************SiteMap Page******************/
+svg {
+    margin-top: -4%;
+    margin-left: 2%;
+}
+
+.svg-line {
+    stroke:grey;
+    stroke-width: 7;
+}
+
+.svg-presentation, .svg-main, .svg-options {
+	font-family: "Bebas Neue", Arial; 
+    font-size: 40px; 
+	fill:red;
+}
+
+.svg-main { 
+	fill:blue;
+}
+
+.svg-options {
+	fill:yellow;	
+}
+
+.svg-circ {
+	fill: "green";
+	stroke: #dfdfdf;
+	stroke-width:2;
+}
+
+.svg-presentation:hover, .svg-main:hover, .svg-options:hover, .svg-circ:hover, .svg-Type:hover {
+    fill: #7DF9FF;
+    cursor: pointer;
+}
+/*************end of SiteMap page*************/
+
+
+
+/************learn The Art Page***************/
+.learn-title {
+    font-family: "Bebas Neue", Arial; 
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.learn-container {
+    font-family: "Bebas Neue", Arial; 
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.learn-row {
+    display: flex;
+}
+
+.learn-polaroid {
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 80px;
+    margin-left: 15px;
+    margin-right: 10px;
+    flex:20%;  
+    padding:20px;
+}
+
+.learn-polaroid:hover {
+    -ms-transform: scale(1.15); /* IE 9 */
+    -webkit-transform: scale(115); /* Safari 3-8 */
+    transform: scale(1.15); 
+    transition:  all 0.9s ease 0s;
+}
+
+.learn-polaroid:not(hover) {
+    transform: scale(1); 
+    transition:  all 0.9s ease 0s;
+}
+
+.learn-image:hover {
+    opacity: 0.7;
+    transition:  all 0.1s ease 0s;
+}
+/*********end of Learn The Art page*********/
+
+
+
+/************Meet And Greet page***********/
+.meet-row {
+	display: flex;
+}
+
+.meet-polaroid {
+    margin-bottom: 25px;
+    margin-left: 15px;
+    margin-right: 10px;
+    flex:5%;
+    padding:15px;
+    position: relative;
+}
+
+.meet-image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.meet-container {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.meet-polaroid:hover .meet-image {
+    opacity: 0.3;
+}
+
+.meet-polaroid:hover .meet-container {
+    opacity: 1;
+}
+
+.meet-text {
+    color: white;
+    font-size: 30px;
+    padding: 16px 24px;
+    font-family: "Bebas Neue", Arial;
+}
+/************End of Meet And Greet***********/
+
+#nav-resize {
+    margin-left: 48%;
+}

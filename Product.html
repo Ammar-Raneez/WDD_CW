@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Product</title><!--this page has the same format and commenting as the Aerial Page-->
+		<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/Learn_Subtopics_CSS.css">
+		<link href="https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap" rel="stylesheet" type= "text/css">
+		<!--importing custom google fonts and the external stylsheet-->
+
+		<script src="JS/Font-size.js"></script>
+		<style>
+			body {
+				background-image:url("Images/product_BG.jpg");
+			}		/*background image for this particular page*/
+		</style>
+		
+	</head>
+
+	<body id="font-change">
+		<header>
+			<div class="nav-links">
+					<div class="logo"><img class="img-logo" src="images/Logo.png" alt="logo"></div>
+					<nav id="navigation">
+						<li><a class="nav" onclick="location.href='Main Page.html'">Home</a></li>
+						<li><a class="nav" onclick="location.href='Merchandise.html'">Merchandise</a></li>
+						<li><a class="nav" onclick="location.href='Image And Details.html'">Image And Details</a></li>
+						<li><a class="nav" onclick="location.href='Feedback.html'">Pop Quiz</a></li>
+						<li><a class="nav active" onclick="location.href='Learn_The_Art.html'">Learn The Art</a></li>
+						<li><a class="nav" onclick="location.href='Feedback.html'">Feedback</a></li>
+						<li><a class="nav" onclick="location.href='SVG_Sitemap.html'">Sitemap</a></li>
+					</nav><!---navbar from the Main page-->
+				</div>
+		</header>
+		
+		<div id="nav-resize">
+			<button type="button" onclick="decreaseFontSize()" id="decreaseFont">-</button>
+			<button type="button" onclick="increaseFontSize()" id="increaseFont">+</button>
+		</div><!--font-size changer-->
+
+		<div class="question">
+			<h1>What is Product Photography ?</h1>
+		</div><!--Main heading-->
+		
+		<body>
+			<div class="container_box">
+				<div id="font-change2" class="all_text">
+					Product photography is a branch of commercial photography which is about accurately but
+					attractively representing a product. The principal application of product photography is 
+					in product catalogues and brochures, with a proportion of product images also being used in advertising.
+				</div><!--Some descriptions of the topic at hand-->
+			</div><br><br><br>
+				
+			<div class="row">
+				<div class="polaroid">
+					<img src="Images/image11.jpg" alt="image1" style="width:100%"  class="image">
+					<div class="container">
+						<p>Vintage Camera</p>
+					</div>
+				</div>
+
+				<div class="polaroid" float=right>
+					<img src="Images/image22.jpg" alt="image2" style="width:100%"  class="image">
+					<div class="container">
+						<p>Watch</p>
+					</div>
+				</div>
+
+				<div class="polaroid">
+					<img src="Images/image33.jpg" alt="image3" style="width:100%"  class="image">
+					<div class="container">
+						<p>Lens</p>
+					</div>
+				</div>
+			</div><!--The three polaroids in the page-->
+		</body>
+		
+		<footer>
+			<p style="color:white; text-align: center;">VisualizeX © Created by -<b><span style="cursor: pointer;" onclick="location.href='Page_Editor_Raveen.html'"> Raveen Sriskandarajah - 2019106 </span></b><a href="#top" style="color: #7DF9FF">[ Back to top ]</a> </p>
+		</footer><!--Footer containing page editor-->
+	</body>
+</html>

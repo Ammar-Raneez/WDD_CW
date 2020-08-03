@@ -1,0 +1,160 @@
+.nav-links {
+    clear: both;
+    overflow: auto;
+}
+
+nav {
+    margin-top: 0px;
+    float: right;
+}
+
+.logo {
+    width: 75px;
+    height: 85;
+    padding: 0px;
+    margin: 0px;
+}
+
+.logo .img-logo {
+    width: 100px;
+    height: 75px;
+    float: left;
+}
+
+nav li {
+    padding: 10px;
+    display: inline;
+    font-size: 1.3rem;
+    font-family: 'Oxanium';
+    opacity: 0.7;
+}
+
+nav li a {
+    text-decoration: none;
+    color: white;
+}
+
+nav li a:hover, nav li .active {
+    color: rgb(102, 255, 255);
+    transition: 1s ease;
+	font-size: 2.2rem;
+	cursor: pointer;
+}
+
+nav li a:not(:hover) {
+    transition: 1s ease;
+}
+
+/* ////////////////////////////////////////- Everything else-///////////////////////////////////////// */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-size: cover;
+	background-attachment: fixed;
+	margin:60px;
+	float:right;
+}
+
+.container_box {
+	padding-top:15px;
+	padding-bottom:15px;
+	width: auto;
+    background: rgba(256, 256, 256, 0.3);
+    border-radius: 15px;
+    margin: 0 auto;
+}
+
+.all_text {
+	font-family: "Bebas Neue", Arial; 
+	font-size: 30px;
+	color: black;
+	padding: 5px;
+}
+
+.row {
+	display: flex;
+}
+
+.polaroid {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 25px;
+	margin-left: 15px;
+	margin-right: 10px;
+	flex:5%;  
+	padding:15px;
+}
+
+.question {
+	font-family: "Bebas Neue", Arial; 
+	text-align: center;
+	padding: 10px 20px;
+	font-size: 40px;
+	color:#7DF9FF;
+}
+
+.container {
+	font-size: 40px;
+	font-family: "Bebas Neue", Arial; 
+	text-align: center;
+	padding: 10px 20px;
+}
+
+.title {
+	font-family: "Bebas Neue", Arial; 
+	font-size: 30px;
+	color: white;
+	text-align: center;
+}
+
+.type {
+	font-family: 'Pacifico', cursive;
+	color: navy;
+	font-size: 30px;
+	padding: 5px;
+}
+
+.square-points {
+	list-style-type: square;
+}
+
+.description {
+	font-family: 'Concert One', cursive;
+	color:white;
+	font-size: 30px;
+	padding: 5px;
+}
+
+.image:hover {
+	-ms-transform: scale(1.15); /* IE 9 */
+	-webkit-transform: scale(115); /* Safari 3-8 */
+	transform: scale(1.5); 
+	transition:  all 0.9s ease 0s;
+	transition:  all 0.8s ease 0s;
+}
+
+.image:not(hover) {
+	transform: scale(1); 
+	transition:  all 0.9s ease 0s;
+}
+
+.about-us {
+    padding-left: 1%;
+    color: white;
+    font-family: 'Oxanium';
+    border: 1px solid rgb(102, 255, 255);
+    width: 7%;
+}
+
+.about-us:hover {
+    cursor: pointer;
+    color: black;
+    background-color: rgb(102, 255, 255);
+    transition: 0.6s ease;
+}
+
+#nav-resize {
+	margin-left: 48%;
+}

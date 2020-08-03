@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <title>Main Page</title>
+    </head>
+
+    <body class="main-body">
+        <header><!--navbar section which holds the logo and the navbar-->
+            <div class="nav-links">
+                <div class="logo"><img class="img-logo" src="Images/Logo.png" alt="logo"></div>
+
+                <nav id="navigation">
+                    <li><a class="nav active"  onclick="location.href='Main Page.html'">Home</a></li>
+                    <li><a class="nav" onclick="location.href='Merchandise.html'">Merchandise</a></li>
+                    <li><a class="nav" onclick="location.href='Image And Details.html'">Image And Details</a></li>
+                    <li><a class="nav" onclick="location.href='Quiz.html'">Pop Quiz</a></li>
+                    <li><a class="nav" onclick="location.href='Learn_The_Art.html'">Learn The Art</a></li>
+                    <li><a class="nav" onclick="location.href='Feedback.html'">Feedback</a></li>
+                    <li><a class="nav" onclick="location.href='SVG_Sitemap.html'">Sitemap</a></li>
+                </nav><!--on click of any of the links directs to the specific pages-->
+            </div>
+        </header>
+
+        <div class="quote">
+            <blockquote id="current-qoute" cite="http://pixelpluck.com/top-50-photography-slogans-one-liners-professionals/">Lose A Hobby. Gain A Passion</blockquote>
+        </div>      <!--random quote generator section-->
+
+        <div class="social">
+            <a href="#"><img src="Images/facebook.png" alt="facebook logo"></a>
+            <a href="#"><img src="Images/twitter.png" alt="twitter logo"></a>
+            <a href="#"><img src="Images/insta.png" alt="instagram logo"></a>
+        </div>      <!--social media icons-->
+
+        <footer class="about-us">
+            <a onclick="location.href='Meet & Greet.html'"><p>About Us</p></a>
+        </footer>   <!--about us link-->
+
+		<footer class="page-editor">
+            <p>VisualizeX &copy; Created by -<b><span style="cursor: pointer;" onclick="location.href='Page_Editor_Ammar.html'"> Ammar Raneez - 2019163 </span></b></p>
+        </footer>   <!--footer containing page editor links-->
+        
+        <script>
+            //random catch phrase generator
+            var catchPhrases = ["A camera that puts a world of possibilities at your fingertips. Literally.",
+            "Back it up. Get it back.",
+            "Been there. Lit that.",
+            "Bring your creativity to life.",
+            "Built for speed.",
+            "Capture it all.",
+            "Change your lens, change your story.",
+            "Compel your audience. Capture the moment. Light with purpose.",
+            "Control. Create.",
+            "Create the entire scene – simply!",
+            "Exceptional images deserve an exceptional presentation.",
+            "Explore. Create. Inspire.",
+            "Freedom of movement. Fast access. Flexibility.",
+            "Go extreme. There’s no turning back.",
+            "If a picture is worth a thousand words, what’s a talking picture worth?",
+            "If you think Nikon is beyond your reach…It’s not!",
+            "Imagine more.",
+            "In the heart of the image.",
+            "In this family, everyone is photogenic.",
+            "Innovative in the moment.",
+            "Judging from your photography, maybe its time to hang it up.",
+            "Lose a hobby. Gain a passion.",
+            "Love for photography. Eat sleep and breathe it. Become a photograph.",
+            "Make a statement without saying a word.",
+            "No one helps you concentrate on your craft like Kodak.",
+            "Photography. It’s all about light.",
+            "Ready. Set. Wow!",
+            "Rock solid.",
+            "Shoot today. Upload tonight. We ship tomorrow.",
+            "The leader in wireless photography.",
+            "The power behind the picture.",
+            "The professional’s source.",
+            "The world is more colorful than the eye can see.",
+            "To capture ten thousand words in the blink of a moment.",
+            "Turn a cloudy day into something beautiful.",
+            "Turn a photo into a work of art.",
+            "Turn your used photo equipment into cash!",
+            "We capture your memories forever.",
+            "We take pictures to record our personal vision of the world.",
+            "We’ve got you covered.",
+            "What happens inside your mind can happen inside a camera!",
+            "What you can see you can photograph.",
+            "You didn’t compromise on your camera. You shouldn’t on your lenses.",
+            "You don’t have to be a Pro to shoot like a Pro.",
+            "Your passion is capturing great moments. So is ours.",
+            "Inspire, Explore, Create & Showcase.",
+            "Think Imagine Create.",
+            "A Photographic Story.",
+            "The 1000 word Photograph.",
+            "Write your own. 🙂"
+            ]   //all the quotes used
+
+            var link = document.getElementById("current-qoute");
+            var current = document.getElementById("current-qoute");
+            var intervalID = 0; //obtaining reference to the content which contains the quote and setting intervalID to 0
+
+            function changePhrase(){
+                var random = Math.floor(Math.random() * catchPhrases.length);
+                current.innerHTML = catchPhrases[random];
+            }                   //generates a random number between 0 and length-1 of the array. sets the value of the quote to the value at the index of the random number of the array
+
+            function generator(){
+                clearInterval(intervalID);
+                intervalID = setInterval(changePhrase, 3000);
+            }                   //call the above function every 3s so the quote is changed every 3s
+            link.addEventListener('mouseover', generator());
+        </script>
+    </body>
+</html>

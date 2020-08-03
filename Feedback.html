@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Form</title>
+            <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="css/style.css"/>
+            <script src="JS/Font-size.js"></script>
+        </head>
+        
+        <body id="font-change" class="feedback-body">            
+            <div class="form-container">
+                <div id="popupwindow" class="popup">
+                    <div class="popup-content">
+                        <span id="close-span" class="close">&times;</span>
+                        <p id="feedback-content"></p>
+                    </div>
+                </div><!--the modal to showcase the user input information-->
+
+                <form id="main-form"><hr><hr>
+                    <div class="form-header">
+                        <h1 class="form-heading">Let Us Know Your Thoughts!</h1>
+                        <div id="logo-form" class="logo"><a href="Main Page.html"><img class="img-logo" src="Images/Logo.png" alt="logo"></a></div>
+                        <div id="nav-resize">
+                            <button type="button" onclick="decreaseFontSize()" id="decreaseFont">-</button>
+                            <button type="button" onclick="increaseFontSize()" id="increaseFont">+</button>
+                        </div><!--font-size changer-->
+                    </div><hr><hr><!--main header, including the logo and heading-->
+
+
+                    <div id="error-message"></div><!--initial hidden error message div tag-->
+
+                    <input placeholder="First Name" type="text" id="fname" name="firstname"><br><br>
+
+                    <input placeholder="Last Name" type="text" id="lname" name="lastname"><br><br>
+
+                    <input placeholder="Email" type="email" id="mail" name="email"><br><br>
+
+                    <textarea placeholder="Comments" id="comments" name="lblcomments" rows="5"></textarea><br><br>
+                    <!--text inputs of name, email and additional comments-->
+
+                    <div class="rating">
+                        <label for="lblrating">Rate us🤗🤗!!</label><br><br>
+                        <label for="ex">Excellent</label> &nbsp; &nbsp; &nbsp;<input value="Excellent" id="ex" name="rating" type="radio">
+                        &nbsp; &nbsp; &nbsp; &nbsp; <label for="good">Good</label> &nbsp; &nbsp; &nbsp;<input value="Good" id="good" name="rating" type="radio">
+                        &nbsp; &nbsp; &nbsp; &nbsp; <label for="nb">Not Bad</label> &nbsp; &nbsp; &nbsp;<input value="Not Bad" id="nb" name="rating" type="radio">
+                        &nbsp; &nbsp; &nbsp; &nbsp; <label for="imp">Can Be Improved</label> &nbsp; &nbsp; &nbsp;<input value="Can Be Improved" id="imp" name="rating" type="radio">
+                    </div><br><br><br><!--radio buttons for rating-->
+
+                    <button class="footer-buttons" id="reset" type="reset">Reset All >>></button>
+                    <button class="footer-buttons" id="submit" type="submit">Submit >>></button><!--footer buttons to reset and submit-->
+
+                    <p class="page-editor-form"><a href="#">VisualizeX &copy; created by: <b onclick="location.href='Page_Editor_Ammar.html'">Ammar Raneez 2019163</b></a></p>
+                </form><!--footer containg the page editor link-->
+            </div>
+            
+            <script>           
+                var reset = document.getElementById("reset");
+                var form = document.getElementById("main-form");
+                var rating = document.getElementsByName("rating");
+                var popup = document.getElementById("popupwindow");
+                var feedback = document.getElementById("feedback-content")
+                var email = document.getElementById("mail");
+                var fName = document.getElementById("fname");
+                var lName = document.getElementById("lname"); //getting all the values of the input fields and the error and modal div tags
+                var span = document.getElementById("close-span");
+                var comments = document.getElementById("comments");
+                var errorMessage = document.getElementById("error-message");
+                var errorText = "";     
+                var ratingValue = "";                        //initializing variables to hold the input rating value and error message
+                var emailRegex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8}?$)/;  //email regex for further validations
+                //any amount of a-z/A-Z/0-9/./-  followed by a @ followed by any amount of a-z/A-Z/0-9/- followed by a fullstop then a-z 2-8 times. finally, a fullstop and a-z 2-8 times which is optional
+
+                //form event listener which listens for a submit action and calls the corresponding anonymous function
+                form.addEventListener('submit', e=> {
+                    for(var i=0; i<rating.length;i++){      
+                        if(rating[i].checked){
+                            ratingValue = rating[i].value;  //obtaining the selected radio button out of the 3 buttons
+                        }
+                    }
+                    e.preventDefault();                     //preventing default behavior of submitting - to prevent redirecting and refreshing of page
+                    if(fName.value.trim()=="") {             //the values are all trimmed to catch entry of only whitespaces 
+                        errorMessage.style.padding = "10px"; errorMessage.style.border = "1px solid rgb(102, 255, 255)";
+                        errorText = "Please enter your first name";     
+                        errorMessage.innerHTML = errorText;
+                    }else if(lName.value.trim()=="") {       //if any of the values are blank, a meaningful message is inserted into the error message div and color and padding is set making the div now visible
+                        errorMessage.style.padding = "10px"; errorMessage.style.border = "1px solid rgb(102, 255, 255)";
+                        errorText = "Please enter your last name";
+                        errorMessage.innerHTML = errorText;
+                    }else if(email.value.trim()=="") {
+                        errorMessage.style.padding = "10px"; errorMessage.style.border = "1px solid rgb(102, 255, 255)";
+                        errorText = "Please enter your email";
+                        errorMessage.innerHTML = errorText;
+                    }else if(ratingValue =="") {
+                        errorMessage.style.padding = "10px"; errorMessage.style.border = "1px solid rgb(102, 255, 255)";
+                        errorText = "Please give us a rating :(";
+                        errorMessage.innerHTML = errorText;
+                    }else if(!emailRegex.test(email.value)) { 
+                        errorMessage.style.padding = "10px"; errorMessage.style.border = "1px solid rgb(102, 255, 255)";
+                        errorText = "Please enter a valid email";
+                        errorMessage.innerHTML = errorText; //if all the above values aren't empty further validation is done in emails checking if the email format is correct
+                    }else if(comments.value=="") {
+                        feedback.innerHTML = `${fName.value} ${lName.value}, Thank you for visiting our site, and giving us your important feedback. You rated our site ${ratingValue}`;
+                        popup.style.display = "block"; //if the comments field is left blank dont add that to the content of the feedback div 
+                    }else if(comments.value!="") {
+                        feedback.innerHTML = `${fName.value} ${lName.value}, Thank you for visiting our site, and giving us your important feedback. You rated our site ${ratingValue}, and gave us an additional comment of ${comments.value}`;
+                        popup.style.display = "block";//display the popup if everything above was valid
+                    }
+                });
+
+                span.addEventListener('click', ()=> {
+                    popup.style.display = 'none';
+                });                                     //event listener for the 'X' on the modal - which closes the modal on click of it
+
+                reset.addEventListener('click', ()=> {
+                    errorMessage.innerHTML = "";
+                    errorMessage.style.padding = "0px"; //reset the form on click of the reset button
+                    errorMessage.style.border = "0px";
+                })
+            </script>
+        </body>
+    </html>

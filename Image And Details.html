@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image and Details</title>
+        <link rel="stylesheet" type="text/css" href="css/image_gallery.css">
+        <script src="JS/Font-size.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Cuprum|PT+Sans+Narrow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Teko" rel="stylesheet">
+    </head>
+
+    <body id="font-change">
+        <header id="#top">	<!-- The navigation bar -->
+            <div class="nav-links">
+                <div class="logo"><img class="img-logo" src="Images/Logo.png" alt="logo"></div>
+                <nav id="navigation">
+                    <li><a class="nav" onclick="location.href='Main Page.html'">Home</a></li>
+                    <li><a class="nav" onclick="location.href='Merchandise.html'">Merchandise</a></li>
+                    <li><a class="nav active" onclick="location.href='Image And Details.html'">Image And Details</a></li>
+                    <li><a class="nav" onclick="location.href='Quiz.html'">Pop Quiz</a></li>
+                    <li><a class="nav" onclick="location.href='Learn_The_Art.html'">Learn The Art</a></li>
+                    <li><a class="nav" onclick="location.href='Feedback.html'">Feedback</a></li>
+                    <li><a class="nav" onclick="location.href='SVG_Sitemap.html'">Sitemap</a></li>
+                </nav>
+            </div>
+    
+            <h1 class="title">VisualizeX</h1>	<!-- Title -->
+
+            <div id="nav-resize">
+                <button type="button" onclick="decreaseFontSize()" id="decreaseFont">-</button>
+                <button type="button" onclick="increaseFontSize()" id="increaseFont">+</button>
+            </div><!--font-size changer-->
+
+            <section class="move">
+                <button class="direct" onclick="location.href='#photos'">Types Of Photography >>></button>		<!-- Button to go to types of photography -->
+                <button class="direct" onclick="window.location.href='#bottom'">Bottom of page >>></button>		<!-- Button to go to end of page -->
+            </section>
+        </header>
+        
+            <form id="font-change2" class="gallery" id="photos" name="f1">
+                <h1 class="formheading">Types of PHOTOGRAPHY</h1>
+                        
+                <select id="page"  class="choose" size="" onchange="pagecolor(this);" >					<!-- Change page colour here -->
+                    <option value="" disabled selected>Color for page
+                    <option value="transparent">Original</option>
+                    <option value="#00ffee" >Electric Blue</option>
+                    <option value="#FF0066">Neon Pink</option>
+                    <option value="#0000BF">Neon Dark Blue</option>
+                    <option value="#00FF99">Neon Green</option>
+                </select>     
+
+                <select  class="choose" id="text"  size=""  onchange="textcolor(this);">				<!-- Change text color here -->
+                    <option value="" disabled selected>Color for text
+                    <option value="#fff">Original</option>
+                    <option value="#444" >Grey</option>
+                    <option value="#FF0000">Red</option>
+                    <option value="#000080">Navy</option>
+                    <option value="#DAA520">Golden road</option>
+                </select>
+
+                <div class="preview">
+                    <img id="0" src="Images/image2.jpg" alt="preview" />
+                        <h2 id="image-description">Types of Photography<br> There are many types folllowed by many		<!-- Text that is visible before any hovering occurs -->
+                            artists...Here are a a few.</h2>
+                </div>
+                
+                <div class="thumb">
+                    <ol>
+                        <div class="row">	
+                            <li class="column">
+                                <a target="_blank" href="Product.html"><img id="4" src="Images/Product.png" onmouseover="preview(this,'Product<br> This type of photograpy usually involves an object or item that is being promoted.')"/></a>		<!-- Image preview and description -->
+                            </li>    
+                            <li class="column">
+                                <a target="_blank" href='urban.html'><img id="1" src="Images/Abstract.png" onmouseover="preview(this,'Abstract <br> This involves shapes and objects that are aesthatically pleaseing to the eye.')"/></a>		<!-- Image preview and description -->
+                            </li> 
+						</div> 
+								
+                        <div class="row">
+                            <li class="column">
+                                <a target="_blank" href='Minimal.html'><img id="2" src="Images/Minimal.png" onmouseover="preview(this,'Minimal<br>This involves a minimalistic approach towards the subject of the image...be it a plant car or vase.')"/></a>    			<!-- Image preview and description -->            
+                            </li>
+                            
+                            <li class="column">
+                                <a target="_blank" href='Portrait.html'><img id="3" src="Images/Portrait.png" onmouseover="preview(this,'Portrait<br>This involves a subject that is in focus with the back-ground in blur so that the subject is sharp and visible to the eye.')"/></a>        	<!-- Image preview and description -->                  
+                            </li> 
+                        </div> 
+
+                        <div class="row">	
+                            <li class="column">
+                                <a target="_blank" href="Landscape.html"><img id="2" src="Images/Landscape (2).jpg" onmouseover="preview(this,'Landscape<br> The most common type of photography that includes sceneries that span over a vast area.')"></a>			<!-- Image preview and description -->
+                            </li>
+                            
+                            <li class="column">
+                                <a target="_blank" href='Aerial.html'><img id="6" src="Images/aerial.png" onmouseover="preview(this,'Aerial<br>This type of photography (or airborne imagery) is the taking of photographs from an aircraft or other flying object')"/></a>         		<!-- Image preview and description -->                
+                            </li>
+                        </div>  
+
+                        <div class="row">
+                            <li class="column">
+                                <a target="_blank" href='Macro.html'><img id="7" src="Images/macro.jpg" onmouseover="preview(this, 'Macro<br> Photography that is shot at close range to showcase details of the subject matter')"></a>		<!-- Image preview and description -->
+                            </li>
+
+                            <li class="column">
+                                <a target="_blank" href='Sports.html'><img id="8" src="Images/sports 3.jpg" onmouseover="preview(this, 'Sports/ Action<br> Photography that captures decisive moments in sport events.')"></a>		<!-- Image preview and description -->
+                            </li>
+                        </div>
+                    </ol> 
+                </div> 
+            </form>
+			
+        <footer	id="bottom">
+            <p><br>VisualizeX &copy; Created by -<b><span style="cursor: pointer;" onclick="location.href='Page_Editor_Amresh.html'"> Amresh Jayakumar - 2019130 </span></b><a href="#top" style="color: #7DF9FF">[ Back to top ]</a> </p>
+        </footer>
+        
+        <script>
+            function pagecolor(color) {
+                document.getElementsByTagName("form")["f1"].style.backgroundColor=color.value;
+            }
+        
+            function textcolor(color) {
+                document.getElementsByTagName("form")["f1"].style.color=color.value;
+            }
+        
+            var lastimg=1;
+            document.getElementById(0).src=document.getElementById(lastimg).src;
+            document.getElementById(lastimg).className="thumb selected";
+        
+            function preview(img,msg) {
+                document.getElementById(lastimg).className="thumb normal";
+                img.className="thumb selected";
+                document.getElementById(0).src=img.src;
+                lastimg=img.id;
+        
+                var imageDescription = document.getElementById("image-description");
+                imageDescription.innerHTML = msg;
+            }
+        </script>
+    </body>
+</html>

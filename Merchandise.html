@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="css/Merchandise.css">
+		<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+		<script>
+			function increaseFontSize() {
+				docElement = document.getElementById('ultra-main-grid');
+				docElement2 = document.getElementById('cameras');
+				style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
+				currentFontSize = parseFloat(style);
+				docElement.style.fontSize = (currentFontSize + 2) + 'px';
+				docElement2.style.fontSize = (currentFontSize - 2) + 'px';
+				}
+
+			function decreaseFontSize() {
+				docElement = document.getElementById('ultra-main-grid');
+				docElement2 = document.getElementById('cameras');
+				style = window.getComputedStyle(docElement, null).getPropertyValue('font-size');
+				currentFontSize = parseFloat(style);
+				docElement.style.fontSize = (currentFontSize - 2) + 'px';
+				docElement2.style.fontSize = (currentFontSize - 2) + 'px';
+			}
+
+			function openNav() {
+				document.getElementById("sidemenu").style.width = "250px";
+				document.getElementById("main").style.marginLeft = "250px";
+				document.getElementById("myhammenu").style.display = "none";
+				document.getElementById("myhammenu").style.transition = "transition: 2s ease";
+			}
+				
+			function closeNav() {
+				document.getElementById("sidemenu").style.width = "0";
+				document.getElementById("main").style.marginLeft= "0";
+				document.getElementById("myhammenu").style.display = "inline";
+				document.getElementById("myhammenu").style.transition = "transition: 2s ease";
+			}
+		</script>
+	</head>
+
+	<body id="ultra-main-grid">
+		<div class="ultra-main-grid">
+			<div>
+				<div class="logo"><img class="img-logo" src="Images/Logo.png" alt="logo"></div>
+				<nav id="navigation">
+					<li><a class="nav" onclick="location.href='Main Page.html'">Home</a></li>
+					<li><a class="nav active" onclick="location.href='Merchandise.html'">Merchandise</a></li>
+					<li><a class="nav" onclick="location.href='Image And Details.html'">Image And Details</a></li>
+					<li><a class="nav" onclick="location.href='Quiz.html'">Pop Quiz</a></li>
+					<li><a class="nav" onclick="location.href='Learn_The_Art.html'">Learn The Art</a></li>
+					<li><a class="nav" onclick="location.href='Feedback.html'">Feedback</a></li>
+					<li><a class="nav" onclick="location.href='SVG_Sitemap.html'">Sitemap</a></li>
+				</nav>
+			</div>
+
+			<div id="nav-resize">
+                <button type="button" onclick="decreaseFontSize()" id="decreaseFont">-</button>
+                <button type="button" onclick="increaseFontSize()" id="increaseFont">+</button>
+            </div>
+
+			<div class="main-grid">
+				<div id="main" class="column1">
+					<div id="sidemenu" class="menu sidebar">
+						<ul>
+							<li class="menuitem"><a onclick="closeNav()" class="closebtn">&times;</a></li>
+							<br>
+							<li class="menuitem"><a class="menubutton" href="#cameras">Cameras</a></li>
+							<br>
+							<li class="menuitem"><a class="menubutton" href="#lenses">Lenses</a></li>
+							<br>
+							<li class="menuitem"><a class="menubutton" href="#accessories">Accessories</a></li>
+							<br>
+							<li class="menuitem"><a class="menubutton" href="#checkout">Order</a></li>
+							<br>
+						</ul>
+					</div>
+					<span id="myhammenu" class="hamburger" onclick="openNav()">&#9776;</span>
+				</div>
+		
+				<div class="column2">
+					<div class="product-grid">
+						<div class="info-grid" id="cameras">
+							<div class="1strow">
+								<div class="info-grid-1">
+									<div class="image">	
+										<img src="Images/camera1.jpg" alt="camera1">		
+									</div>
+									<div class="item">
+										<div class="info">
+											<h2 id="camera1"> Canon 80D ( Body Only )  </h2>
+											<p class="price"> $930 </p>
+											<p class="info"> 
+											<h2> Specifications </h2>
+											<ul>
+												<li> 24.2MP APS-C CMOS Sensor    </li>
+												<li> DIGIC 6 Image Processor   </li>
+												<li> 3.0″ 1.04m-Dot Vari-Angle Touchscreen    </li>
+												<li> Full HD 1080p Video Recording at 60 fps   </li>
+												<li> 45-Point All Cross-Type AF System  </li>
+												<li> Expanded ISO 25600, Up to 7 fps Shooting  </li>	
+											</ul>
+											</p>	
+										</div>
+									</div>
+								</div>		
+							</div>
+							<div class="2ndrow">
+								<p> <button> Add to cart </button> </p>
+								<form>
+									<input type="number" id="number1" min="0" max="10" step="1" size="20"  value="0" />
+								</form>
+							</div>
+						</div>
+
+						<div class="info-grid">
+							<div class="1strow">
+								<div class="info-grid-1">
+									<div class="image">			
+										<img src="Images/camera2.jpg" alt="camera1">		
+									</div>
+									<div>
+										<div class="info">
+											<h2 id="camera2"> Canon 1DX Mark III( Body Only )  </h2>
+											<p class="price"> $6,499 </p>
+											<p class="info"> 
+												<h2> Specifications </h2>
+												<ul>
+													<li>  20.1MP Full-Frame CMOS Sensor   </li>
+													<li> DIGIC X Image Processor   </li>
+													<li> Dual CFexpress card slots   </li>
+													<li> 12-bit 5.5K RAW video internal recording   </li>
+													<li> 191-point optical viewfinder AF  </li>
+													<li> ISO range of 100-102400; Expandable to 50-819200  </li>
+												</ul>
+											</p>	
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="2ndrow">
+								<p> <button> Add to cart </button> </p>
+								<form>
+									<input type="number" id="number2" min="0" max="10" step="1" size="20"  value="0" />
+								</form>		
+							</div>
+						</div>
+						
+						<div class="info-grid">
+							<div class="1strow">
+								<div class="info-grid-1">
+									<div class="image">			
+										<img src="Images/camera3.jpg" alt="camera1">		
+									</div>
+									<div>
+										<div class="info">
+											<h2 id="camera3"> Canon EOS R ( Body Only )  </h2>
+											<p class="price"> $1,799 </p>
+											<p class="info"> 
+												<h2> Specifications </h2>
+												<ul>
+													<li> 30.3MP full-frame CMOS sensor    </li>
+													<li> DIGIC 8 Image Processor   </li>
+													<li> 3.15-inch tilt-angle touchscreen 2,100,000 dots.   </li>
+													<li> Video: 4K.  </li>
+													<li>  5,655-point AF  </li>
+													<li> Burst shooting: 8fps. </li>
+												</ul>
+											</p>
+										</div>
+									</div>	
+								</div>
+							</div>
+							<div class="2ndrow">
+								<p> <button> Add to cart </button> </p>
+								<form>
+									<input type="number" id="number3" min="0" max="10" step="1" size="20"  value="0" />
+								</form>
+							</div>		
+						</div>
+							
+						<div class="info-grid">
+							<div class="1strow">
+								<div class="info-grid-1">
+									<div class="image">		
+										<img src="Images/camera4.jpg" alt="camera1">
+									</div>
+									<div>
+										<div class="info">
+											<h2 id="camera4"> Sony Alpha A7 Mark III ( Body Only )  </h2>
+											<p class="price"> $1,999 </p>
+											<p class="info"> 
+												<h2> Specifications </h2>
+												<ul>
+													<li>  24MP Full-Frame Exmor R BSI CMOS Sensor    </li>
+													<li> BIONZ X Image Processor    </li>
+													<li>  3.0-inch tilt-angle touchscreen   </li>
+													<li> Video Recording 3840 x 2160 / 30 fps    </li>
+													<li> 693 AF points   </li>
+													<li> ISO Range 50 - 204800   </li>
+												</ul>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>						
+							<div class="2ndrow">
+								<p> <button> Add to cart </button> </p>
+								<form>
+									<input type="number" id="number4" min="0" max="10" step="1" size="20"  value="0" />
+								</form>	
+							</div>	
+						</div>
+					</div>
+
+
+					<div class="product-grid1">
+						<div class="product" id="lenses">
+							<img src="Images/canonlens1.png" alt="canonlens">
+							<h2 id="lens1"> Canon F/1.8 50mm STM LENS  </h2>
+							<p class="price"> $99 </p>
+							<p class="info"> This lens is ideal for low light photography and doesn't cost a fortune! It's also generally referred to as the "nifty fifty" amongst photographers.</p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number5" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product">
+							<img src="Images/canonlens2.png" alt="canonlens2">
+							<h2 id="lens2"> Canon F/1.4 50mm USM LENS </h2>
+							<p class="price"> $320 </p>
+							<p>This low light lens gives you more range in darker enviroments, with an aperture of 1.4 more light is shown into the image sensor. </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number6" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product">
+							<img src="Images/canonlens3.png" alt="canonlens">
+							<h2 id="lens3"> Canon F/1.2L 50mm USM LENS </h2>
+							<p class="price"> $1370 </p>
+							<p> This lens has the lowest aperture available. It provides sharp image quality in extreme low light situations, this is the ultimate low light lens. </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number7" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product">
+							<img src="Images/canonlens4-1.png" alt="canonlens">
+							<h2 id="lens4"> Canon F/2.8 mark ii 24-70mm USM LENS </h2>
+							<p class="price"> $1460 </p>
+							<p> This lens is mainly focused on sport event type photography as it as a zoom of 24-70mm it makes the lens ideal for capturing images away from the user. </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number8" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product">
+							<img src="Images/canonlens5.png" alt="canonlens">
+							<h2 id="lens5"> Canon F/2.8L 100mm Macro IS USM LENS </h2>
+							<p class="price"> $750 </p>
+							<p> This lens mainly focuses on extremely close range images which are referred to as macro images. It has a minumum focus distance of 4 inches. </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number9" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product">
+							<img src="Images/canonlens6.png" alt="canonlens">
+							<h2 id="lens6"> Canon F/4.5-5.6L 100-400mm USM LENS</h2>
+							<p class="price"> $1700 </p>
+							<p> This lens is ideal for wildlife photography as it provides an amazing zoom range of 100-400mm, This lens is also image stabilized. </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number10" min="0" max="10" step="1" size="20"  value="0" />
+							</form>							
+						</div>
+					</div>
+
+
+					<div class="product-grid-main" id="accessories">
+						<div class="product1">
+							<div>
+								<img src="Images/accessories1.jpg" alt="accessories1">
+							</div>
+							<div class="info">
+								<h2 id="accessories1"> Canon LP-E6N Lithium ion battery </h2>
+								<p class="price"> $85 </p>
+								<p class="info"> Compatible with Canon EOS 7D Mark II, 7D, 5D Mark II, 5D Mark III, 5D Mark IV, 5DS, 5DS R, 60D, 60Da, 70D, 6D, and 6D Mark II Cameras</p>
+								<p> <button> Add to cart </button> </p>
+								<form>									
+									<input type="number" id="number11" min="0" max="10" step="1" size="20"  value="0" />
+								</form>
+							</div>
+						</div>
+
+						<div class="product2">
+							<img src="Images/accessories2.jpg" alt="accessories2">
+							<h2 id="accessories2"> GoPole Dual Battery Kit For GoPro HERO7/6/5 Black </h2>
+							<p class="price"> $70 </p>
+							<p>    2 x HERO7/6/5 Black Batteries1 x Dual, USB-Powered Charger, Can Charge OEM GoPro Batteries, Micro-USB Charging Cable </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number12" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product2">
+							<img src="Images/accessories3.png" alt="accessories3">
+							<h2 id="accessories3">Lexar® Professional 633x 1TB SDHC™/SDXC™ UHS-I Cards</h2>
+							<p class="price"> $450 </p>
+							<p>High speed, Class 10 performance—leverages UHS-I technology for a read transfer speed up to 633x (95MB/s),
+							Capture high quality images and extended lengths of stunning 1080p full HD, 3D, and 4K video with a DSLR camera, HD camcorder, or 3D camera </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number13" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product1">
+							<img src="Images/accessories4.jpg" alt="accessories4">
+							<h2 id="accessories4"> Nikon EN-EL15 Lithium-Ion Battery </h2>
+							<p class="price"> $85 </p>
+							<p> Fits D500, D600, D610, D7000, D7100, D750, D800, D800E, D810, 1 V1 Cameras</p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number14" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product1">
+							<img src="Images/accessories5.jpg" alt="accessories5">
+							<h2 id="accessories5"> Nikon MH-25 Quick Charger </h2>
+							<p class="price"> $93 </p>
+							<p> For EN-EL15 Battery, Direct Wall Plug and Power Cord </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number15" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product2">
+							<img src="Images/accessories6.jpg" alt="accessories6">
+							<h2 id="accessories6">SanDisk 256GB Extreme UHS-I SDXC Memory Card 150 MB/S</h2>
+							<p class="price"> $175 </p>
+							<p>  256GB Storage Capacity
+							UHS-I / V30 / U3 / Class 10
+							Max Read Speed: 150 MB/s
+							Max Write Speed: 70 MB/s
+							Min Write Speed: 30 MB/s
+							Records Full HD, 3D, and 4K Video
+							Built-In Write-Protect Switch </p>
+							<p> <button> Add to cart </button> </p>
+							<form>
+								<input type="number" id="number16" min="0" max="10" step="1" size="20"  value="0" />
+							</form>
+						</div>
+
+						<div class="product2" id="checkout">
+							<form id="merch-form">
+								<label for="fname"><i class="firstname1"></i> Full Name</label>
+								<input type="text" id="fname" name="firstname" placeholder="Your Full Name"><br><br>
+								<label for="email"><i class="email1"></i> Email &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+								<input type="text" id="email" name="email" placeholder="Your Email"><br><br>
+								<label for="adr"><i class="address1"></i> Address &nbsp; &nbsp;</label>
+								<input type="text" id="address" name="address" placeholder="Address"><br><br>
+								<label for="city"><i class="city1"></i> City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</label>
+								<input type="text" id="city" name="city" placeholder="Your City"><br><br>
+								<button type="submit"> Check out </button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="JS/Merchandise.js"></script>
+		<footer>
+			<p style="color:white; text-align: center;">VisualizeX © Created by -<b><span style="cursor: pointer;" onclick="location.href='Page_Editor_Raveen.html'"> Raveen Sriskandarajah - 2019106 </span></b><a href="#top" style="color: #7DF9FF">[ Back to top ]</a> </p>
+		</footer>
+	</body>
+</html>

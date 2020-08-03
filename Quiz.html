@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset = "UTF-8">
+        <title>Quiz</title>
+        <link rel = "stylesheet" href = "css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Oxanium&display=swap" rel="stylesheet">
+        <style>
+            body {
+                background-image:url("Images/Quiz BG.jpg");
+                background-attachment:fixed;
+                background-size: cover;
+            }															/*background image for this particular page*/
+        </style>
+    </head>
+
+    <body class="quiz-body">
+		<header>
+			<div class="nav-links">
+				<div class="logo"><img class="img-logo" src="Images/Logo.png" alt="logo"></div>
+				<nav id="navigation">
+					<li><a class="nav" onclick="location.href='Main Page.html'">Home</a></li>
+					<li><a class="nav" onclick="location.href='Merchandise.html'">Merchandise</a></li>
+					<li><a class="nav" onclick="location.href='Image And Details.html'">Image And Details</a></li>
+					<li><a class="nav active" onclick="location.href='Quiz.html'">Pop Quiz</a></li>
+                    <li><a class="nav" onclick="location.href='Learn_The_Art.html'">Learn The Art</a></li>
+                    <li><a class="nav" onclick="location.href='Feedback.html'">Feedback</a></li>
+					<li><a class="nav" onclick="location.href='SVG_Sitemap.html'">Sitemap</a></li>
+				</nav>
+			</div><!---navbar from the Main page-->
+		</header>
+		
+        <div id = "quiz-container">
+            <div id = "quiz-start"> Test Your <br/> Knowledge!</div>
+
+            <div id = "quiz" style="display: none">
+                <div id = "quiz-question"></div>
+
+                <div id = "quiz-choices">
+                    <div class = "quiz-choice" id = "A" onclick = "checkAnswer('A')"></div>
+                    <div class = "quiz-choice" id = "B" onclick = "checkAnswer('B')"></div>
+                    <div class = "quiz-choice" id = "C" onclick = "checkAnswer('C')"></div>
+                </div>
+
+                <div id = "quiz-timer">
+                    <div id = "quiz-counter"></div>
+                    <div id = "quiz-btimeGauge"></div>
+                    <div id = "quiz-timeGauge"></div>
+                </div>
+            </div>
+            
+            <div id = "quiz-resultsContainer" style = "display: none"></div>
+        </div>
+
+        <footer class="about-us">
+            <a onclick="location.href='Meet & Greet.html'"><p>About Us</p></a>
+        </footer>   <!--about us link-->
+
+        <footer class="page-editor">
+			<p>VisualizeX &copy; Created by -<b><span style="cursor: pointer;" onclick="location.href='Page_Editor_Michael.html'"> Michael Nadesapillai - 2019121 </span></b></p>
+		</footer>
+        <script src = "JS/Quiz JS.js"></script>
+    </body>
+</html>
